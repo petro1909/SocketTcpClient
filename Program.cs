@@ -23,8 +23,11 @@ namespace SocketTcpClient
                 // подключаемся к удаленному хосту
                 
                     socket.Connect(ipPoint);
-                    
-                    Console.Write("Введите количество данных в сообзениии:");
+                    /*
+                     * Для выключения сканера количество данных - 3 - Значения 2 1 6
+                     * Для включения - 4 - Значаения - 2 1 19 1
+                     */
+                    Console.Write("Введите количество данных в сообщении:");
                     int number = int.Parse(Console.ReadLine());
                     byte[] data = new byte[number];
                     for(int i = 0; i < number; i++)
